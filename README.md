@@ -117,10 +117,7 @@ This work does not support or promote malicious activity.
 
 ## Author
 
-**[Your Name]**
+Pooja Noochila
 Aspiring SOC Analyst | Cybersecurity Enthusiast
-
-* LinkedIn: [Add Link]
-* GitHub: [Add Link]
 
 ---
