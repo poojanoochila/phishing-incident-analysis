@@ -101,9 +101,8 @@ phishing-incident-analysis/
 ├── report.pdf
 ├── iocs.txt
 ├── screenshots/
-│   ├── email-header-analysis.png
-│   ├── landing-page.png
-│   ├── adsense-script.png
+│   ├── email-content.png
+│   ├── multiple-campaign-messages.png
 │
 └── notes.md
 ```
