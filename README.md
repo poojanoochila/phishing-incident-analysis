@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project presents a **SOC-style investigation** of a multi-vector phishing and ad-fraud campaign targeting job seekers. The analysis focuses on identifying attack patterns, extracting indicators of compromise (IOCs), and mapping adversary behavior to industry-standard frameworks.
+This project presents a **SOC-style investigation** of a multi-vector phishing and ad-fraud campaign targeting job seekers. The analysis focuses on identifying attack patterns, extracting indicators of compromise (IOCs), and profiling adversary infrastructure and behavior.
 
 ---
 
@@ -19,11 +19,11 @@ This project presents a **SOC-style investigation** of a multi-vector phishing a
 
 ## Tools & Technologies
 
-* **Wireshark** – Network traffic and packet analysis
-* **Email Header Analysis** – Tracing sender and relay paths
-* **Hashing Tools** (HashCalc, certutil, PowerShell Get-FileHash) – Integrity verification
-* **Nmap** – Network reconnaissance (lab validation)
-* **Autopsy / FTK Imager (Conceptual)** – Forensics workflow understanding
+* **Email Header Analysis** – Tracing sender origin and authentication (DKIM, SMTP)
+* **Browser DevTools** – HTML source code and script analysis
+* **Hashing Tools** (HashCalc, certutil, PowerShell Get-FileHash) – Integrity concepts
+* **Nmap (Conceptual)** – Network reconnaissance understanding
+* **OSINT Techniques** – Domain and infrastructure profiling
 
 ---
 
@@ -31,15 +31,21 @@ This project presents a **SOC-style investigation** of a multi-vector phishing a
 
 ### 1. Email Analysis
 
-* Examined email headers to trace origin and identify spoofing attempts
-* Identified suspicious sender domains and anomalies in routing paths
+* Examined email headers to trace origin and verify authentication mechanisms
+* Identified suspicious sender domains and social engineering patterns
 
 ### 2. URL & Payload Inspection
 
 * Analyzed embedded links and redirection behavior
-* Flagged malicious domains and phishing landing patterns
+* Identified parameterized URLs and tracking indicators
 
-### 3. IOC Extraction & Correlation
+### 3. Web & Source Code Analysis
+
+* Inspected HTML source code of landing pages
+* Identified CMS platform, advertising scripts, and tracking mechanisms
+* Detected monetization and user-tracking components
+
+### 4. IOC Extraction & Correlation
 
 * Extracted indicators including:
 
@@ -48,17 +54,13 @@ This project presents a **SOC-style investigation** of a multi-vector phishing a
   * Associated IP addresses
 * Correlated indicators to understand campaign infrastructure
 
-### 4. Network Analysis
-
-* Inspected packet captures (PCAP) using Wireshark
-* Identified anomalous DNS queries and HTTP traffic patterns
-
 ### 5. Threat Mapping
 
 * Mapped observed techniques to **MITRE ATT&CK**
 * Identified tactics such as:
 
   * Initial Access (Phishing)
+  * Resource Development / Infrastructure Setup
   * Command & Control (suspicious domains)
 
 ### 6. Reporting & Disclosure
@@ -71,11 +73,11 @@ This project presents a **SOC-style investigation** of a multi-vector phishing a
 
 ## Key Outcomes
 
-* Identified a coordinated phishing campaign targeting job seekers
+* Identified a coordinated phishing and ad-fraud campaign targeting job seekers
 * Extracted and analyzed **15+ IOCs**
+* Identified tracking and monetization mechanisms (AdSense, analytics scripts)
 * Mapped attacker behavior to MITRE ATT&CK techniques
 * Produced a professional incident report aligned with SOC workflows
-* Contributed to mitigation through responsible disclosure
 
 ---
 
@@ -84,7 +86,7 @@ This project presents a **SOC-style investigation** of a multi-vector phishing a
 * Threat Detection & Analysis
 * Incident Investigation & Reporting
 * IOC Extraction & Correlation
-* Network Traffic Analysis
+* Web Application & Source Code Analysis
 * Digital Forensics Fundamentals
 * Security Framework Mapping (MITRE ATT&CK)
 
@@ -100,7 +102,8 @@ phishing-incident-analysis/
 ├── iocs.txt
 ├── screenshots/
 │   ├── email-header-analysis.png
-│   ├── wireshark-analysis.png
+│   ├── landing-page.png
+│   ├── adsense-script.png
 │
 └── notes.md
 ```
