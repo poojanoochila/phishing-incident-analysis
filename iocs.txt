@@ -1,0 +1,20 @@
+# Domains
+[redacted].com
+[redacted].info
+
+# Email
+support@[redacted].com
+
+# URLs
+hxxps://[redacted].info/question.php?ID=609
+hxxps://[redacted].info/question.php?ID=615
+
+# IPs
+35.213.xxx.xxx
+172.66.xxx.xxx
+
+# Tracking
+cmid=[redacted]
+
+# AdSense
+ca-pub-[redacted]
